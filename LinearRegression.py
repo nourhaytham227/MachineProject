@@ -46,6 +46,6 @@ plt.scatter(y_test, y_pred, color='blue')
 plt.xlabel("Actual Charges")
 plt.ylabel("Predicted Charges")
 plt.title("Actual vs Predicted Medical Charges")
-plt.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], 'k--', lw=2)
+plt.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()])
 plt.show()
 
