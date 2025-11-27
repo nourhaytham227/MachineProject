@@ -1,6 +1,7 @@
 import numpy as np 
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns   
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 from sklearn.preprocessing import StandardScaler
@@ -28,6 +29,8 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_
 scaler= StandardScaler()
 x_train= scaler.fit_transform(x_train)
 x_test= scaler.transform(x_test)
+y_train=scaler.fit_transform(y_train.values.reshape(-1,1)).flatten()
+y_test=scaler.transform(y_test.values.reshape(-1,1)).flatten()
 
 #Training model
 model= LinearRegression()
